@@ -30,7 +30,7 @@ resource "harness_platform_service" "example" {
                           value: val1
                         - name: var2
                           type: String
-                          value: ${local.test}
+                          value: ${var.selected_environments}
                     type: Kubernetes
                   gitOpsEnabled: false
               EOT
