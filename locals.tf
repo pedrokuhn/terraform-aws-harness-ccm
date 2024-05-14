@@ -1,3 +1,3 @@
-#locals {
-#  test = $split( ",", ${var.selected_environments})
-#}
+locals {
+  test = "${element(split(",", var.selected_environments))}"
+}
