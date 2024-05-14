@@ -1,7 +1,3 @@
-locals {
-  test = ${split( ",", ${var.selected_environments})}
-}
-
 resource "harness_platform_service" "example" {
   identifier  = "testSvcForceDeleteTerraform"
   name        = "testSvcForceDeleteTerraform"
