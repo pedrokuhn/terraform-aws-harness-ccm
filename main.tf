@@ -2,7 +2,7 @@ resource "harness_platform_service" "example" {
   identifier  = "testSvcForceDeleteTerraform"
   name        = "testSvcForceDeleteTerraform"
   description = "test"
-  tags        = ${var.selected_environments}
+  tags        = var.selected_environments
   force_delete = "true"
   yaml = <<-EOT
                 service:
