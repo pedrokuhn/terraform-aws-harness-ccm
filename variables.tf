@@ -1,5 +1,5 @@
 variable "selected_environments" {
-  type        = list(string)
+  type        = list
   description = "test"
   default     = ["dev"]
 }
