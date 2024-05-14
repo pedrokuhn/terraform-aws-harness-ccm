@@ -1,3 +1,3 @@
 locals {
-  test = split( ",", ${var.selected_environments})
+  test = $split( ",", ${var.selected_environments})
 }
