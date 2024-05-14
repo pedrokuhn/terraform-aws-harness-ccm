@@ -2,6 +2,7 @@ resource "harness_platform_service" "example" {
   identifier  = "testSvcForceDeleteTerraform"
   name        = "testSvcForceDeleteTerraform"
   description = "test"
+  tags        = ${var.selected_environments}
   force_delete = "true"
   yaml = <<-EOT
                 service:
@@ -30,7 +31,7 @@ resource "harness_platform_service" "example" {
                           value: val1
                         - name: var2
                           type: String
-                          value: ${var.selected_environments}
+                          value: val2
                     type: Kubernetes
                   gitOpsEnabled: false
               EOT
